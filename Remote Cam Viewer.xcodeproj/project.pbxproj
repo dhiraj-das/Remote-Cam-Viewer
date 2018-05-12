@@ -12,6 +12,7 @@
 		8B33D97520A77385001AECDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97320A77385001AECDD /* Main.storyboard */; };
 		8B33D97720A77385001AECDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97620A77385001AECDD /* Assets.xcassets */; };
 		8B33D97A20A77385001AECDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97820A77385001AECDD /* LaunchScreen.storyboard */; };
+		E8AF47BB81F65A43F357E7B2 /* Pods_Remote_Cam_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		8B33D97620A77385001AECDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B33D97920A77385001AECDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B33D97B20A77385001AECDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.release.xcconfig"; sourceTree = "<group>"; };
+		A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.debug.xcconfig"; sourceTree = "<group>"; };
+		F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Cam_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AF47BB81F65A43F357E7B2 /* Pods_Remote_Cam_Viewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C6952D818FD451C4663550D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */,
+				987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		31A8150E8025636781C020FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B33D96320A77385001AECDD = {
 			isa = PBXGroup;
 			children = (
 				8B33D96E20A77385001AECDD /* Remote Cam Viewer */,
 				8B33D96D20A77385001AECDD /* Products */,
+				2C6952D818FD451C4663550D /* Pods */,
+				31A8150E8025636781C020FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B33D97E20A77385001AECDD /* Build configuration list for PBXNativeTarget "Remote Cam Viewer" */;
 			buildPhases = (
+				F17A740F141981804067B747 /* [CP] Check Pods Manifest.lock */,
 				8B33D96820A77385001AECDD /* Sources */,
 				8B33D96920A77385001AECDD /* Frameworks */,
 				8B33D96A20A77385001AECDD /* Resources */,
+				54E8988EF3D1BC80E7A437EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54E8988EF3D1BC80E7A437EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ONVIFCamera/ONVIFCamera.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ONVIFCamera.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F17A740F141981804067B747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Remote Cam Viewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B33D96820A77385001AECDD /* Sources */ = {
@@ -272,6 +337,7 @@
 		};
 		8B33D97F20A77385001AECDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +352,7 @@
 		};
 		8B33D98020A77385001AECDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

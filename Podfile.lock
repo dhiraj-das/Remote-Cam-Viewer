@@ -1,0 +1,20 @@
+PODS:
+  - MobileVLCKit (3.0.2)
+  - ONVIFCamera (1.1.6)
+
+DEPENDENCIES:
+  - MobileVLCKit
+  - ONVIFCamera
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - MobileVLCKit
+    - ONVIFCamera
+
+SPEC CHECKSUMS:
+  MobileVLCKit: a9e06de53e7a7fd43d7b04bcab4f2e68868f768a
+  ONVIFCamera: bd7230ca9be776682cfa1d8be25ed149f9040af0
+
+PODFILE CHECKSUM: 4cc3e827c97490d2d88ec4b0100cdadffe93178f
+
+COCOAPODS: 1.5.0
