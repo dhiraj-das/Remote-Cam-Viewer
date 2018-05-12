@@ -6,6 +6,9 @@ target 'Remote Cam Viewer' do
   use_frameworks!
 pod 'ONVIFCamera'
 pod 'MobileVLCKit'
+pod 'Firebase/Core'
+pod 'FirebaseUI'
+pod 'FirebaseUI/Auth'
   # Pods for Remote Cam Viewer
 
 end

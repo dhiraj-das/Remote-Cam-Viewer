@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		8B33D97020A77385001AECDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D96F20A77385001AECDD /* AppDelegate.swift */; };
-		8B33D97220A77385001AECDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D97120A77385001AECDD /* ViewController.swift */; };
 		8B33D97520A77385001AECDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97320A77385001AECDD /* Main.storyboard */; };
 		8B33D97720A77385001AECDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97620A77385001AECDD /* Assets.xcassets */; };
 		8B33D97A20A77385001AECDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97820A77385001AECDD /* LaunchScreen.storyboard */; };
+		8B33D98420A77731001AECDD /* CameraListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D98320A77731001AECDD /* CameraListViewController.swift */; };
+		8B33D98620A777D6001AECDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D98520A777D6001AECDD /* GoogleService-Info.plist */; };
 		E8AF47BB81F65A43F357E7B2 /* Pods_Remote_Cam_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B33D96C20A77385001AECDD /* Remote Cam Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remote Cam Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B33D96F20A77385001AECDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B33D97120A77385001AECDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B33D97420A77385001AECDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B33D97620A77385001AECDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B33D97920A77385001AECDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B33D97B20A77385001AECDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B33D98320A77731001AECDD /* CameraListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraListViewController.swift; sourceTree = "<group>"; };
+		8B33D98520A777D6001AECDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.release.xcconfig"; sourceTree = "<group>"; };
 		A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Cam_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,12 +80,13 @@
 		8B33D96E20A77385001AECDD /* Remote Cam Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				8B33D98320A77731001AECDD /* CameraListViewController.swift */,
 				8B33D96F20A77385001AECDD /* AppDelegate.swift */,
-				8B33D97120A77385001AECDD /* ViewController.swift */,
 				8B33D97320A77385001AECDD /* Main.storyboard */,
 				8B33D97620A77385001AECDD /* Assets.xcassets */,
 				8B33D97820A77385001AECDD /* LaunchScreen.storyboard */,
 				8B33D97B20A77385001AECDD /* Info.plist */,
+				8B33D98520A777D6001AECDD /* GoogleService-Info.plist */,
 			);
 			path = "Remote Cam Viewer";
 			sourceTree = "<group>";
@@ -100,6 +103,7 @@
 				8B33D96920A77385001AECDD /* Frameworks */,
 				8B33D96A20A77385001AECDD /* Resources */,
 				54E8988EF3D1BC80E7A437EA /* [CP] Embed Pods Frameworks */,
+				A1C273488ACDEEF83B1D593E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B33D97A20A77385001AECDD /* LaunchScreen.storyboard in Resources */,
+				8B33D98620A777D6001AECDD /* GoogleService-Info.plist in Resources */,
 				8B33D97720A77385001AECDD /* Assets.xcassets in Resources */,
 				8B33D97520A77385001AECDD /* Main.storyboard in Resources */,
 			);
@@ -165,15 +170,81 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ONVIFCamera/ONVIFCamera.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ONVIFCamera.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1C273488ACDEEF83B1D593E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F17A740F141981804067B747 /* [CP] Check Pods Manifest.lock */ = {
@@ -201,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B33D97220A77385001AECDD /* ViewController.swift in Sources */,
+				8B33D98420A77731001AECDD /* CameraListViewController.swift in Sources */,
 				8B33D97020A77385001AECDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
