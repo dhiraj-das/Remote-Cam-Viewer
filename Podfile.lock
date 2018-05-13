@@ -149,6 +149,7 @@ PODS:
 DEPENDENCIES:
   - Eureka
   - Firebase/Core
+  - Firebase/Database
   - FirebaseUI
   - FirebaseUI/Auth
   - MobileVLCKit
@@ -219,6 +220,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 3072aecb9143991e8543ad1d0c8cbf0e82d9eec1
+PODFILE CHECKSUM: 0349e2339192840dba7cf0aa6e4d211491ac9305
 
 COCOAPODS: 1.5.0

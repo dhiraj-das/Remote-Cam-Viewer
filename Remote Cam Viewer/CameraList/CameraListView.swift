@@ -16,6 +16,12 @@ class CameraListView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var dataprovider: CameraListDataProvider? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     struct LayoutDimensions {
         static let sectionInsets: CGFloat = 2.0
     }
@@ -67,6 +73,6 @@ extension CameraListView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return dataprovider?.cameras.count ?? 0
     }
 }

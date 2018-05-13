@@ -24,6 +24,8 @@
 		8B33D9A320A87C3C001AECDD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D9A220A87C3C001AECDD /* UIViewController+Extensions.swift */; };
 		8B33D9A520A88BEA001AECDD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D9A420A88BEA001AECDD /* String+Extension.swift */; };
 		8B33D9A720A88E7E001AECDD /* EurekaValidIPRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D9A620A88E7E001AECDD /* EurekaValidIPRule.swift */; };
+		8B33D9A920A8A86A001AECDD /* CameraListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D9A820A8A86A001AECDD /* CameraListDataProvider.swift */; };
+		8B33D9AB20A8AAC2001AECDD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D9AA20A8AAC2001AECDD /* DatabaseManager.swift */; };
 		E8AF47BB81F65A43F357E7B2 /* Pods_Remote_Cam_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		8B33D9A220A87C3C001AECDD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		8B33D9A420A88BEA001AECDD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8B33D9A620A88E7E001AECDD /* EurekaValidIPRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaValidIPRule.swift; sourceTree = "<group>"; };
+		8B33D9A820A8A86A001AECDD /* CameraListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListDataProvider.swift; sourceTree = "<group>"; };
+		8B33D9AA20A8AAC2001AECDD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.release.xcconfig"; sourceTree = "<group>"; };
 		A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Cam_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 				8B33D98820A77AFD001AECDD /* AuthManager.swift */,
 				8B33D99F20A8734D001AECDD /* ONVIFCameraManager.swift */,
 				8B33D9A620A88E7E001AECDD /* EurekaValidIPRule.swift */,
+				8B33D9AA20A8AAC2001AECDD /* DatabaseManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				8B33D98320A77731001AECDD /* CameraListViewController.swift */,
 				8B33D99020A7F973001AECDD /* CameraListView.swift */,
 				8B33D99220A7FB2E001AECDD /* CameraListCollectionViewCell.swift */,
+				8B33D9A820A8A86A001AECDD /* CameraListDataProvider.swift */,
 			);
 			path = CameraList;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			files = (
 				8B33D98420A77731001AECDD /* CameraListViewController.swift in Sources */,
 				8B33D98920A77AFD001AECDD /* AuthManager.swift in Sources */,
+				8B33D9AB20A8AAC2001AECDD /* DatabaseManager.swift in Sources */,
 				8B33D99620A8091F001AECDD /* NewCameraViewController.swift in Sources */,
 				8B33D97020A77385001AECDD /* AppDelegate.swift in Sources */,
 				8B33D9A520A88BEA001AECDD /* String+Extension.swift in Sources */,
@@ -364,6 +371,7 @@
 				8B33D99320A7FB2E001AECDD /* CameraListCollectionViewCell.swift in Sources */,
 				8B33D99120A7F973001AECDD /* CameraListView.swift in Sources */,
 				8B33D9A320A87C3C001AECDD /* UIViewController+Extensions.swift in Sources */,
+				8B33D9A920A8A86A001AECDD /* CameraListDataProvider.swift in Sources */,
 				8B33D98B20A7821B001AECDD /* UserSetupViewController.swift in Sources */,
 				8B33D98E20A78687001AECDD /* UserSetupView.swift in Sources */,
 				8B33D99D20A86804001AECDD /* Camera.swift in Sources */,

@@ -12,14 +12,27 @@ class CameraListViewController: UIViewController {
 
     @IBOutlet var cameraListView: CameraListView!
     
+    private var dataprovider: CameraListDataProvider! {
+        didSet {
+            cameraListView.dataprovider = dataprovider
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraListView.delegate = self
+        fetchCameras()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBar()
+    }
+    
+    private func fetchCameras() {
+        DatabaseManager.shared.fetchCamerasForCurrentUser { [weak self] (camera) in
+            self?.dataprovider = CameraListDataProvider(cameras: camera ?? [])
+        }
     }
     
     private func setupNavigationBar() {
@@ -40,16 +53,17 @@ class CameraListViewController: UIViewController {
 
 extension CameraListViewController: CameraListViewDelegate {
     func didSelectItem() {
-        
+        //        ONVIFCameraManager.shared.connect(toCamera: camera) { [weak self] (onvifCamera, error) in
+        //            if let _error = error {
+        //                self?.showErrorAlert(forError: _error)
+        //            }
+        //        }
     }
 }
 
 extension CameraListViewController: NewCameraViewControllerDelegate {
     func didAddCamera(camera: Camera) {
-        ONVIFCameraManager.shared.connect(toCamera: camera) { [weak self] (onvifCamera, error) in
-            if let _error = error {
-                self?.showErrorAlert(forError: _error)
-            }
-        }
+        DatabaseManager.shared.addCamera(camera: camera)
+        fetchCameras()
     }
 }

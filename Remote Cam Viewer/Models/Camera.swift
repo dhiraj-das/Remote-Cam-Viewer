@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Camera {
+struct Camera: Codable {
     var name: String
     var ip: String
     var port: Int?
     var username: String
     var password: String
 }
+

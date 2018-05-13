@@ -19,6 +19,10 @@ class AuthManager: NSObject {
         return Auth.auth().currentUser != nil
     }
     
+    static var currentUser: User? {
+        return Auth.auth().currentUser
+    }
+    
     weak var delegate: AuthManagerDelegate?
     
     var authUI: FUIAuth?
