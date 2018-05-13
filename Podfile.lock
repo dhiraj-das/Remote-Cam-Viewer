@@ -11,6 +11,7 @@ PODS:
   - BoringSSL/Implementation (10.0):
     - BoringSSL/Interface (= 10.0)
   - BoringSSL/Interface (10.0)
+  - Eureka (4.1.1)
   - FBSDKCoreKit (4.31.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.31.1):
@@ -146,6 +147,7 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
+  - Eureka
   - Firebase/Core
   - FirebaseUI
   - FirebaseUI/Auth
@@ -156,6 +158,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Bolts
     - BoringSSL
+    - Eureka
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -187,6 +190,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
+  Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
   FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
   FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
@@ -215,6 +219,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: ed42b97d06684c66168530407cb5823a694d3592
+PODFILE CHECKSUM: 3072aecb9143991e8543ad1d0c8cbf0e82d9eec1
 
 COCOAPODS: 1.5.0

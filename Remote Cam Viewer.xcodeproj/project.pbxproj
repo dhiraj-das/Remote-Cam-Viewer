@@ -16,6 +16,9 @@
 		8B33D98920A77AFD001AECDD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D98820A77AFD001AECDD /* AuthManager.swift */; };
 		8B33D98B20A7821B001AECDD /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D98A20A7821B001AECDD /* UserSetupViewController.swift */; };
 		8B33D98E20A78687001AECDD /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D98D20A78687001AECDD /* UserSetupView.swift */; };
+		8B33D99120A7F973001AECDD /* CameraListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D99020A7F973001AECDD /* CameraListView.swift */; };
+		8B33D99320A7FB2E001AECDD /* CameraListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D99220A7FB2E001AECDD /* CameraListCollectionViewCell.swift */; };
+		8B33D99620A8091F001AECDD /* NewCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D99520A8091F001AECDD /* NewCameraViewController.swift */; };
 		E8AF47BB81F65A43F357E7B2 /* Pods_Remote_Cam_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		8B33D98820A77AFD001AECDD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8B33D98A20A7821B001AECDD /* UserSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupViewController.swift; sourceTree = "<group>"; };
 		8B33D98D20A78687001AECDD /* UserSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupView.swift; sourceTree = "<group>"; };
+		8B33D99020A7F973001AECDD /* CameraListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListView.swift; sourceTree = "<group>"; };
+		8B33D99220A7FB2E001AECDD /* CameraListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B33D99520A8091F001AECDD /* NewCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCameraViewController.swift; sourceTree = "<group>"; };
 		987081504C3300DFCBD9828E /* Pods-Remote Cam Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.release.xcconfig"; sourceTree = "<group>"; };
 		A5E10BC461E69994A92249E1 /* Pods-Remote Cam Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remote Cam Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		F75F2D39DC64AAE6CBC7C8DF /* Pods_Remote_Cam_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Remote_Cam_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +92,10 @@
 		8B33D96E20A77385001AECDD /* Remote Cam Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				8B33D99420A80900001AECDD /* NewCamera */,
+				8B33D98F20A7F94E001AECDD /* CameraList */,
 				8B33D98C20A78221001AECDD /* UserSetup */,
 				8B33D98720A77AE7001AECDD /* Common */,
-				8B33D98320A77731001AECDD /* CameraListViewController.swift */,
 				8B33D96F20A77385001AECDD /* AppDelegate.swift */,
 				8B33D97320A77385001AECDD /* Main.storyboard */,
 				8B33D97620A77385001AECDD /* Assets.xcassets */,
@@ -114,6 +121,24 @@
 				8B33D98D20A78687001AECDD /* UserSetupView.swift */,
 			);
 			path = UserSetup;
+			sourceTree = "<group>";
+		};
+		8B33D98F20A7F94E001AECDD /* CameraList */ = {
+			isa = PBXGroup;
+			children = (
+				8B33D98320A77731001AECDD /* CameraListViewController.swift */,
+				8B33D99020A7F973001AECDD /* CameraListView.swift */,
+				8B33D99220A7FB2E001AECDD /* CameraListCollectionViewCell.swift */,
+			);
+			path = CameraList;
+			sourceTree = "<group>";
+		};
+		8B33D99420A80900001AECDD /* NewCamera */ = {
+			isa = PBXGroup;
+			children = (
+				8B33D99520A8091F001AECDD /* NewCameraViewController.swift */,
+			);
+			path = NewCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +222,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Remote Cam Viewer/Pods-Remote Cam Viewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
@@ -218,6 +244,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
@@ -299,7 +326,10 @@
 			files = (
 				8B33D98420A77731001AECDD /* CameraListViewController.swift in Sources */,
 				8B33D98920A77AFD001AECDD /* AuthManager.swift in Sources */,
+				8B33D99620A8091F001AECDD /* NewCameraViewController.swift in Sources */,
 				8B33D97020A77385001AECDD /* AppDelegate.swift in Sources */,
+				8B33D99320A7FB2E001AECDD /* CameraListCollectionViewCell.swift in Sources */,
+				8B33D99120A7F973001AECDD /* CameraListView.swift in Sources */,
 				8B33D98B20A7821B001AECDD /* UserSetupViewController.swift in Sources */,
 				8B33D98E20A78687001AECDD /* UserSetupView.swift in Sources */,
 			);

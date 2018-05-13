@@ -9,6 +9,7 @@ pod 'MobileVLCKit'
 pod 'Firebase/Core'
 pod 'FirebaseUI'
 pod 'FirebaseUI/Auth'
+pod 'Eureka'
   # Pods for Remote Cam Viewer
 
 end
