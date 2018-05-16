@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CameraListViewDelegate: class {
-    func didSelectItem()
+    func didSelectCamera(camera: Camera)
 }
 
 class CameraListView: UIView {
@@ -58,7 +58,8 @@ extension CameraListView: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem()
+        guard let cameras = dataprovider?.cameras else { return }
+        delegate?.didSelectCamera(camera: cameras[indexPath.item])
     }
 }
 

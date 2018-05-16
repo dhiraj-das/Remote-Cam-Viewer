@@ -11,11 +11,14 @@ import ONVIFCamera
 
 enum CameraError: Error {
     case defaultError(error: String)
+    case unknownError
     
     var localizedDescription: String {
         switch self {
         case .defaultError(let error):
             return error
+        case .unknownError:
+            return "Something went wrong"
         }
     }
 }
@@ -23,18 +26,30 @@ enum CameraError: Error {
 class ONVIFCameraManager {
     
     static let shared = ONVIFCameraManager()
-    var camera: ONVIFCamera?
+    private var camera: ONVIFCamera?
+    private let license = "nU8Yi3Turrn42DmbDIelGDPvYzatf4ZJTE6SF2GwHtZFcaGzSM+JxCE+YyK7M69KOo58YsA4scb/WqeaKklRgA=="
     
     private init() {
         
     }
     
-    func connect(toCamera camera: Camera, completion: @escaping (_ camera: ONVIFCamera?, _ error: Error?) -> Void) {
+    func connect(toCamera camera: Camera, completion: @escaping (_ uri: String?, _ error: Error?) -> Void) {
         self.camera = ONVIFCamera(with: camera.ip,
-                                      credential: (login: camera.username, password: camera.password))
+                                  credential: (login: camera.username, password: camera.password),
+                                  soapLicenseKey: license)
         self.camera?.getServices {
-            self.camera?.getCameraInformation(callback: { (camera) in
-                completion(camera, nil)
+            self.camera?.getCameraInformation(callback: { camera in
+                camera.getProfiles(profiles: { profiles in
+                    if profiles.count > 0 {
+                        camera.getStreamURI(with: profiles.first!.token, uri: { uri in
+                            completion(uri, nil)
+                            return
+                        })
+                    } else {
+                        completion(nil, CameraError.unknownError)
+                        return
+                    }
+                })
             }) { (error) in
                 completion(nil, CameraError.defaultError(error: error))
             }

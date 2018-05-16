@@ -49,15 +49,30 @@ class CameraListViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: newCameraController)
         present(navigationController, animated: true, completion: nil)
     }
+    
+    private func connectTo(camera: Camera) {
+        ONVIFCameraManager.shared.connect(toCamera: camera) { [weak self] (uri, error) in
+            if let _error = error {
+                self?.showErrorAlert(forError: _error)
+                return
+            }
+            guard let _uri = uri else {
+                return
+            }
+            self?.showCameraStream(withURI: _uri)
+        }
+    }
+    
+    private func showCameraStream(withURI uri: String) {
+        guard let cameraStreamViewController = storyboard?.instantiateViewController(withIdentifier: "CameraStreamViewController") as? CameraStreamViewController else { return }
+        cameraStreamViewController.URI = uri
+        navigationController?.pushViewController(cameraStreamViewController, animated: true)
+    }
 }
 
 extension CameraListViewController: CameraListViewDelegate {
-    func didSelectItem() {
-        //        ONVIFCameraManager.shared.connect(toCamera: camera) { [weak self] (onvifCamera, error) in
-        //            if let _error = error {
-        //                self?.showErrorAlert(forError: _error)
-        //            }
-        //        }
+    func didSelectCamera(camera: Camera) {
+        connectTo(camera: camera)
     }
 }
 

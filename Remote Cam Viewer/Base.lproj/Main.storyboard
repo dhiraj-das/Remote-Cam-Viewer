@@ -171,6 +171,36 @@
             </objects>
             <point key="canvasLocation" x="436" y="780.35982008995506"/>
         </scene>
+        <!--Camera Stream View Controller-->
+        <scene sceneID="5Ga-AM-B9v">
+            <objects>
+                <viewController storyboardIdentifier="CameraStreamViewController" id="ASs-zu-7dn" customClass="CameraStreamViewController" customModule="Remote_Cam_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HB6-88-VKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lO-Uh-19t">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0lO-Uh-19t" firstAttribute="leading" secondItem="oPD-JO-UNd" secondAttribute="leading" id="8pR-oE-38o"/>
+                            <constraint firstItem="0lO-Uh-19t" firstAttribute="top" secondItem="oPD-JO-UNd" secondAttribute="top" id="BA7-6g-a2S"/>
+                            <constraint firstItem="oPD-JO-UNd" firstAttribute="bottom" secondItem="0lO-Uh-19t" secondAttribute="bottom" id="lQZ-Nd-3BZ"/>
+                            <constraint firstItem="oPD-JO-UNd" firstAttribute="trailing" secondItem="0lO-Uh-19t" secondAttribute="trailing" id="pnu-OE-ffp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oPD-JO-UNd"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="0lO-Uh-19t" id="agh-bH-zR2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5L-Gh-CEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="782"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mmr-h2-bhg">
             <objects>

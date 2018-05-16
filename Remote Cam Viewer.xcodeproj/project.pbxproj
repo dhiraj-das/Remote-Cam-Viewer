@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0373A520AB36CD00397E99 /* CameraStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0373A420AB36CD00397E99 /* CameraStreamViewController.swift */; };
 		8B33D97020A77385001AECDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B33D96F20A77385001AECDD /* AppDelegate.swift */; };
 		8B33D97520A77385001AECDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97320A77385001AECDD /* Main.storyboard */; };
 		8B33D97720A77385001AECDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B33D97620A77385001AECDD /* Assets.xcassets */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0373A420AB36CD00397E99 /* CameraStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStreamViewController.swift; sourceTree = "<group>"; };
+		8B0373A620AB3A7F00397E99 /* Remote_Cam_Viewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Remote_Cam_Viewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		8B33D96C20A77385001AECDD /* Remote Cam Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remote Cam Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B33D96F20A77385001AECDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B33D97420A77385001AECDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B0373A320AB35DE00397E99 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				8B0373A420AB36CD00397E99 /* CameraStreamViewController.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		8B33D96320A77385001AECDD = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +117,7 @@
 		8B33D96E20A77385001AECDD /* Remote Cam Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				8B0373A320AB35DE00397E99 /* CameraView */,
 				8B33D9A120A87C25001AECDD /* Extensions */,
 				8B33D99B20A867F3001AECDD /* Models */,
 				8B33D99420A80900001AECDD /* NewCamera */,
@@ -118,6 +130,7 @@
 				8B33D97820A77385001AECDD /* LaunchScreen.storyboard */,
 				8B33D97B20A77385001AECDD /* Info.plist */,
 				8B33D98520A777D6001AECDD /* GoogleService-Info.plist */,
+				8B0373A620AB3A7F00397E99 /* Remote_Cam_Viewer-Bridging-Header.h */,
 			);
 			path = "Remote Cam Viewer";
 			sourceTree = "<group>";
@@ -375,6 +388,7 @@
 				8B33D98B20A7821B001AECDD /* UserSetupViewController.swift in Sources */,
 				8B33D98E20A78687001AECDD /* UserSetupView.swift in Sources */,
 				8B33D99D20A86804001AECDD /* Camera.swift in Sources */,
+				8B0373A520AB36CD00397E99 /* CameraStreamViewController.swift in Sources */,
 				8B33D9A020A8734D001AECDD /* ONVIFCameraManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,10 +528,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGQMH8WW3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Remote Cam Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dhirajdas.Remote-Cam-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onvif.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Remote Cam Viewer/Remote_Cam_Viewer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -529,10 +548,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGQMH8WW3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Remote Cam Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dhirajdas.Remote-Cam-Viewer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onvif.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Remote Cam Viewer/Remote_Cam_Viewer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

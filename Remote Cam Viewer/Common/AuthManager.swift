@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseAuthUI
+import FirebaseUI
 
 protocol AuthManagerDelegate: class {
     func didSignIn(withAuthDataResult result: AuthDataResult?, error: Error?)
